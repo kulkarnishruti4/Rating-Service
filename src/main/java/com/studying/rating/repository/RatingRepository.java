@@ -6,12 +6,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.studying.rating.entity.Rating;
 
-public interface RatingRepository extends JpaRepository<Rating, String>{
+public interface RatingRepository extends JpaRepository<Rating, Long>{
 	
 	// custom finder methods for tables which are in another schema/db
 	
-	List<Rating> findByUserId(String userId);
+	List<Rating> findByUserId(Long userId);
 	
-	List<Rating> findByHotelId(String hotelId);
+	List<Rating> findByHotelId(Long hotelId);
 
 }
